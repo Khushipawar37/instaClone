@@ -1,10 +1,42 @@
-import './header.css'
+import "./header.css";
+import dp from './dpp.jpg';
 
-export default function header () {
-
-    return (
-        <div className='header'>
-        <div className='headName'><img src ="https://render.myfonts.net/fonts/font_rend.php?id=8d78a8e52bb5e24d90a2233c95c41af5&rt=Instagram&rs=48&w=1500&rbe=&sc=2&nie=true&fg=000000&bg=FFFFFF&ft=&nf=1"></img></div>
+export default function Header() {
+  return (
+    <div className="header">
+      <div className="headName">Instagram</div>
+      <div className="headIcons">
+        <div className="icon">
+          <i class="fa-solid fa-house"></i>Home
         </div>
-    )
+        <div className="icon">
+          <i class="fa-solid fa-magnifying-glass"></i>Search
+        </div>
+        <div className="icon">
+          <i class="fa-regular fa-compass"></i>Explore
+        </div>
+        <div className="icon">
+        <i class="material-icons">movie</i>
+        Reels
+        </div>
+        <div className="icon">
+        <i class="fa-regular fa-comment-dots"></i>Messages
+        </div>
+        <div className="icon">
+        <i class="fa-regular fa-heart"></i>Notifications
+        </div>
+        <div className="icon">
+        <i class="fa-regular fa-square-plus"></i>Create
+        </div>
+      </div>
+      <div className="headProfile">
+        <div className="dp"><img alt = "img" src ={dp}></img></div>
+        <div className="profileName">Profile</div>
+        </div>
+        <div className="icon">
+        <i class="fa-solid fa-bars"></i>More
+        </div>
+        <div className="line"></div>
+    </div>
+  );
 }

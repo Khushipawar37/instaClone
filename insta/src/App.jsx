@@ -1,10 +1,9 @@
-import './App.css'
-import header from './Header/header'
+import Header from './Header/Header'
+import './index.css'
 
 function App() {
-
   return (
-    <header/>
+    <Header/>
   )
 }
 

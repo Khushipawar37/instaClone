@@ -2,3 +2,55 @@
     padding:0;
     margin:0;
 }
+.header{
+    border-right: 1px rgb(70, 70, 70) solid;
+    width:fit-content;
+}
+.headName{
+    color:white;
+    font-family: "Grand Hotel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:2.5rem;
+    padding:2rem;
+    margin-top:0.4rem;
+    margin-right:7rem;
+}
+.icon{
+    color:white;
+    font-size:1.4rem;
+    font-family: "Fira Sans", sans-serif;
+    font-weight:400;
+    padding:1.1rem;
+    margin-left:1rem;
+    border-radius: 1rem;
+}
+.icon i {
+    margin-right:1rem;
+}
+.icon i :hover{
+    font-size:2rem;
+}
+.icon:hover{
+    background-color: rgb(30, 30, 30);
+    cursor: pointer;
+}
+.dp img{
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    margin-right:7px;
+}
+.profileName{
+    font-size:1.4rem;
+    font-family: "Fira Sans", sans-serif;
+    font-weight:400;
+    color:white;
+}
+.headProfile{
+    display:flex;
+    padding:1rem;
+    margin-left:0.8rem;
+}
+
+  
