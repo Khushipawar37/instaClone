@@ -3,7 +3,7 @@
     margin:0;
 }
 .story{
-    padding:1.2rem;
+    padding:1rem;
     display:flex;
 }
 .story_prof {
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
+    margin: 0.4rem;
 }
 
 .story_prof img {
@@ -23,3 +23,12 @@
     border-radius: 50%; 
     background: white; 
 }
+.story_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  .story_name{
+    color:white;
+  }
