@@ -1,6 +1,35 @@
 import "./main.css";
 import dp from "./dpp.jpg";
+import React, { useState } from "react";
+
 export default function Main() {
+  const [comment, setComment] = useState("");
+  const [submittedComments, setSubmittedComments] = useState([]);
+  const [likeCount, setLikeCount] = useState(85);
+  const [commentCount, setCommentCount] = useState(15);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleChange = (e) => {
+    setComment(e.target.value);
+  };
+
+  const handleLikeClick = () => {
+    if (isLiked) {
+      setLikeCount(likeCount - 1);
+    } else {
+      setLikeCount(likeCount + 1);
+    }
+    setIsLiked(!isLiked);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (comment.trim() !== "") {
+      setSubmittedComments([...submittedComments, comment]);
+      setComment("");
+      setCommentCount(commentCount + 1);
+    }
+  };
   return (
     <>
       <div className="stories">
@@ -81,22 +110,59 @@ export default function Main() {
           </div>
           <div className="postName">khushi_pawarr</div>
           <div className="postTime">2d</div>
-          <div className="postIcon"><i class="fa-solid fa-ellipsis"></i></div>
+          <div className="postIcon">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
         </div>
-        <div className="postImg"><img src="https://images.unsplash.com/photo-1525026198548-4baa812f1183?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></div>
+        <div className="postImg">
+          <img src="https://images.unsplash.com/photo-1525026198548-4baa812f1183?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </div>
         <div className="postEdit">
-          <div className="postLike"><i class="fa-regular fa-heart"></i></div>
-          <div className="postLikeCount">85</div>
-          <div className="postCom"><i class="fa-regular fa-comment"></i></div>
-          <div className="postComCount">15</div>
-          <div className="postSave"><i class="fa-regular fa-bookmark"></i></div>
+          <div
+            className={`postLike ${isLiked ? "liked" : ""}`}
+            onClick={handleLikeClick}
+          >
+            <i className="fa-regular fa-heart"></i>
+          </div>
+          <div className="postLikeCount">{likeCount}</div>
+          <div className="postCom">
+            <i class="fa-regular fa-comment"></i>
+          </div>
+          <div className="postComCount">{commentCount}</div>
+          <div className="postSave">
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
         </div>
         <div className="postCaption">
           <div className="postName">Khushi</div>
-          <div className="postCap"><span class="emoji">🌟</span>    <span class="mountain-emoji">🏔️</span>
+          <div className="postCap">
+            <span class="emoji">🌟</span> <span class="mountain-emoji">🏔️</span>
           </div>
         </div>
         <div className="postViewCap">View all comments</div>
+        <div className="commentSection">
+          <form onSubmit={handleSubmit} className="commentForm">
+            <textarea
+              value={comment}
+              onChange={handleChange}
+              placeholder="Add a comment"
+              rows="2"
+              className="commentBox"
+            ></textarea>
+            {comment.trim() && (
+              <button type="submit" className="postButton">
+                Post
+              </button>
+            )}
+          </form>
+          <div className="submittedComments">
+            {submittedComments.map((cmt, idx) => (
+              <div key={idx} className="commentItem">
+                {cmt}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
