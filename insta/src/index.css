@@ -1,11 +1,23 @@
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-  background-color:black;
+body {
+  background-color: black;
 }
-.content{
-  display:flex;
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Allows children to stack on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+
 }
+@media (max-width: 1500px) {
+  .sugg_con,
+  .sugg_for {
+    display: none; /* Hide suggestions for better focus */
+  }
+}
+

@@ -7,36 +7,36 @@ export default function Header() {
       <div className="headName">Instagram</div>
       <div className="headIcons">
         <div className="icon">
-          <i class="fa-solid fa-house"></i>Home
+          <i class="fa-solid fa-house"></i><div className="iconNmae">Home</div>
         </div>
         <div className="icon">
-          <i class="fa-solid fa-magnifying-glass"></i>Search
+          <i class="fa-solid fa-magnifying-glass"></i><div className="iconNmae">Search</div>
         </div>
         <div className="icon">
-          <i class="fa-regular fa-compass"></i>Explore
+          <i class="fa-regular fa-compass"></i><div className="iconNmae">Explore</div>
         </div>
         <div className="icon">
         <i class="material-icons">movie</i>
-        Reels
+        <div className="iconNmae">Reels</div>
         </div>
         <div className="icon">
-        <i class="fa-regular fa-comment-dots"></i>Messages
+        <i class="fa-regular fa-comment-dots"></i><div className="iconNmae">Messages</div>
         </div>
         <div className="icon">
-        <i class="fa-regular fa-heart"></i>Notifications
+        <i class="fa-regular fa-heart"></i><div className="iconNmae">Notifications</div>
         </div>
         <div className="icon">
-        <i class="fa-regular fa-square-plus"></i>Create
+        <i class="fa-regular fa-square-plus"></i><div className="iconNmae">Create</div>
+        </div>
+        <div className="icon">
+        <i class="fa-solid fa-bars"></i><div className="iconNmae">More</div>
         </div>
       </div>
       <div className="headProfile">
         <div className="dp"><img alt = "img" src ={dp}></img></div>
         <div className="profileName">Profile</div>
         </div>
-        <div className="icon">
-        <i class="fa-solid fa-bars"></i>More
-        </div>
-        <div className="line"></div>
+        <div className="line"></div> 
     </div>
   );
 }
