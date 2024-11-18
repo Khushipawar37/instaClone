@@ -14,7 +14,7 @@ body {
   gap: 1rem;
 
 }
-@media (max-width: 780px) {
+@media (max-width: 1000px) {
   .sugg_con,
   .sugg_for {
     display: none; /* Hide suggestions for better focus */
