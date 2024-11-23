@@ -52,7 +52,8 @@ export default function Main() {
     {
       id: 1,
       username: "khushi_pawarr",
-      profilePic: "https://images.unsplash.com/photo-1609432463625-9bcf935b2dab?q=80&w=1887",
+      profilePic:
+        "https://images.unsplash.com/photo-1609432463625-9bcf935b2dab?q=80&w=1887",
       time: "2d",
       postImage:
         "https://images.unsplash.com/photo-1525026198548-4baa812f1183?q=80&w=1934",
@@ -65,7 +66,8 @@ export default function Main() {
     {
       id: 2,
       username: "Shreya23",
-      profilePic: "https://images.unsplash.com/photo-1609432463625-9bcf935b2dab?q=80&w=1887",
+      profilePic:
+        "https://images.unsplash.com/photo-1678468826224-886aaccd22eb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       time: "7d",
       postImage:
         "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1840",
@@ -75,31 +77,53 @@ export default function Main() {
       isLiked: false,
       comments: [],
     },
+    {
+      id: 2,
+      username: "Aayush_pvt",
+      profilePic:
+        "https://images.unsplash.com/photo-1602471615287-d733c59b79c4?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      time: "1d",
+      postImage:
+        "https://plus.unsplash.com/premium_photo-1708195862125-1ebd135c5186?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      caption: "Art galleries >>>",
+      likeCount: 32,
+      commentCount: 6,
+      isLiked: false,
+      comments: [],
+    },
   ]);
 
   const handleLikeClick = (id) => {
     setPosts((prevPosts) =>
       prevPosts.map((post) =>
         post.id === id
-          ? { ...post, likeCount: post.isLiked ? post.likeCount - 1 : post.likeCount + 1, isLiked: !post.isLiked }
+          ? {
+              ...post,
+              likeCount: post.isLiked ? post.likeCount - 1 : post.likeCount + 1,
+              isLiked: !post.isLiked,
+            }
           : post
       )
     );
   };
 
   const handleCommentSubmit = (id, comment) => {
+    const profileName = "Khushi"; // Default profile name
+
     if (comment.trim() !== "") {
       setPosts((prevPosts) =>
         prevPosts.map((post) =>
           post.id === id
             ? {
                 ...post,
-                comments: [...post.comments, comment],
+                comments: [...post.comments, `${profileName}: ${comment}`],
                 commentCount: post.commentCount + 1,
               }
             : post
         )
       );
+    } else {
+      alert("Please enter a comment.");
     }
   };
 
