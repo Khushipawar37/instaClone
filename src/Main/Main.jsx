@@ -108,7 +108,7 @@ export default function Main() {
   };
 
   const handleCommentSubmit = (id, comment) => {
-    const profileName = "Khushi"; // Default profile name
+    const profileName = "Khushi";
 
     if (comment.trim() !== "") {
       setPosts((prevPosts) =>
@@ -130,7 +130,6 @@ export default function Main() {
   return (
     <>
       <div className="main">
-        {/* Stories Section */}
         <div className="stories">
           <button
             onClick={handlePrevClick}
@@ -181,7 +180,7 @@ export default function Main() {
                 className={`postLike ${post.isLiked ? "liked" : ""}`}
                 onClick={() => handleLikeClick(post.id)}
               >
-                <i className="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>{" "}
               </div>
               <div className="postLikeCount">{post.likeCount}</div>
               <div className="postCom">

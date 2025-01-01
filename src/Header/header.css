@@ -5,6 +5,7 @@
 .header{
     border-right: 1px rgb(70, 70, 70) solid;
     width:fit-content;
+    position:fixed;
 }
 .headName{
     color:white;
@@ -54,43 +55,43 @@
     margin-left:0.8rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .header {
     position: fixed;
-    left: 0;
-    top:6rem;
-    right: 0;
-    border-top: none; /* Remove top border */
+    left: 3rem;
+    bottom:0;
+    right: 0; 
+    border-top: none; 
     display:flex;
-    justify-content: space-evenly; /* Distribute icons evenly */
+    justify-content: space-evenly; 
     align-items: center;
-    /* padding: 0.8rem 0; */
     z-index: 1000;
   
   }
   .headName {
-    display: none; /* Hide name on small screens */
+    display: none; 
   }
   
   .headIcons  {
-    display: grid;
-    font-size: 2rem; /* Increase size of icons on small screens */
-    width: 70px; /* Increase the width of the icons for better touch target */
+    background-color: rgb(3, 2, 2);
+    display:flex;
+    font-size: 2rem; 
+    width:fit-content; 
+    padding:0.5rem;
   }
 
   .profileName ,.iconNmae{
-    display: none; /* Hide profile name on mobile */
+    display: none;  
   }
 
-  /* Ensures icons are aligned horizontally and spaced out properly at the bottom */
   .headIcons .icon{
     position: relative;
     left:-3rem;
-    flex-direction: row; /* Align items in a row */
+    flex-direction: row; 
     justify-content: space-around; 
     width: 100%; 
   }
   .headProfile {
-    display: none; /* Hide profile name and image on smaller screens */
+    display: none; 
   }
 }

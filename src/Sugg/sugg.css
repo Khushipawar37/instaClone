@@ -35,7 +35,5 @@
     justify-content:space-between;
 }
 .sugg_con{
-    position:relative;
-    right:0;
-    top:0;
+    padding-right:5rem;
 }
