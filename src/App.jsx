@@ -5,7 +5,6 @@ import Main from './Main/Main'
 import Suggested from './Sugg/Sugg'
 import Signup from "./Signup";
 import Login from "./Login";
-import Profile from "./profile";
 
 function App() {
   const [user, setUser] = useState(null);
