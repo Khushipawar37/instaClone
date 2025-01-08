@@ -1,0 +1,83 @@
+/* General styling for the body */
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Centered container */
+  form {
+    background-color: #121212;
+    color: #fff;
+    width: 360px;
+    padding: 20px;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Heading */
+  h1 {
+    font-family: 'Billabong', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* Input fields */
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #262626;
+    border-radius: 4px;
+    background-color: #262626;
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  input::placeholder {
+    color: #8e8e8e;
+  }
+  
+  /* Buttons */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #007bc4;
+  }
+  
+  /* Error message styling */
+  p {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+  
+  /* Additional text */
+  a {
+    color: #0095f6;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
