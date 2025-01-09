@@ -4,6 +4,7 @@ import "./index.css";
 import Main from "./Main/Main";
 import Suggested from "./Sugg/Sugg";
 import Login from "./Login";
+import AuthPage from "./Authpage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -13,9 +14,7 @@ function App() {
   return (
     <div>
       {!user ? (
-        <>
-          <Login onAuthSuccess={handleAuthSuccess} />
-        </>
+        <AuthPage onAuthSuccess={handleAuthSuccess} />
       ) : (
         <div className="content">
           <Header />

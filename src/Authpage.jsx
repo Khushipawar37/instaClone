@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
-import "./styles/auth.css";
+import './auth.css';
 
 const AuthPage = ({ onAuthSuccess }) => {
   const [isLogin, setIsLogin] = useState(true);

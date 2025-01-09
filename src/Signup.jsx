@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { signup } from "./auth";
-import "./login.css";
 import './auth.css';
 
 const Signup = ({ onSignupSuccess, switchToLogin }) => {
@@ -29,7 +28,7 @@ const Signup = ({ onSignupSuccess, switchToLogin }) => {
       <div className="auth-container">
         <div className="auth-card">
           <div className="logo-container">
-            <img src={InstagramLogo} alt="Instagram" className="instagram-logo" />
+          <div className="logo_head">Instagram</div>
           </div>
   
           <form onSubmit={handleSignup} className="auth-form">
