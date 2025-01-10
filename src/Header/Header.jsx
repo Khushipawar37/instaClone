@@ -1,13 +1,14 @@
 import "./header.css";
 import dp from './dpp.jpg';
 
-export default function Header() {
+export default function Header({ onHomeClick, onProfileClick }) {
   return (
     <div className="header">
       <div className="headName">Instagram</div>
       <div className="headIcons">
-        <div className="icon">
-          <i class="fa-solid fa-house"></i><div className="iconNmae">Home</div>
+      <div className="icon" onClick={onHomeClick}>
+          <i className="fa-solid fa-house"></i>
+          <div className="iconNmae">Home</div>
         </div>
         <div className="icon">
           <i class="fa-solid fa-magnifying-glass"></i><div className="iconNmae">Search</div>
@@ -32,8 +33,10 @@ export default function Header() {
         <i class="fa-solid fa-bars"></i><div className="iconNmae">More</div>
         </div>
       </div>
-      <div className="headProfile">
-        <div className="dp"><img alt = "img" src ={dp}></img></div>
+      <div className="headProfile" onClick={onProfileClick}>
+        <div className="dp">
+          <img alt="img" src={dp} />
+        </div>
         <div className="profileName">Profile</div>
         </div>
         <div className="line"></div> 
