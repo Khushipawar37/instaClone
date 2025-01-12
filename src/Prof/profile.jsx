@@ -1,6 +1,7 @@
 import React from 'react';
 import './profile.css';
 import profImg from '../prof.png';
+import Suggested from '../Sugg/Sugg';
 
 const Profile = ({ user }) => {
   return (
@@ -41,9 +42,6 @@ const Profile = ({ user }) => {
             </div>
           </div>
 
-          <div className="profile-bio">
-            <h1 className="full-name">{user?.profile?.fullName || 'Name'}</h1>
-          </div>
         </div>
       </div>
 

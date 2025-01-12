@@ -24,7 +24,7 @@
     font-family: "Fira Sans", sans-serif;
     font-weight:400;
     padding:1.1rem;
-    margin-left:1rem;
+    margin-left:0.8rem;
     border-radius: 1rem;
 }
 .icon i {
@@ -52,7 +52,6 @@
 .headProfile{
     display:flex;
     padding:1rem;
-    margin-left:0.8rem;
 }
 
 @media (max-width: 1000px) {
@@ -91,7 +90,7 @@
     justify-content: space-around; 
     width: 100%; 
   }
-  .headProfile {
-    display: none; 
-  }
+}
+.headProfile:hover{
+  cursor:pointer;
 }

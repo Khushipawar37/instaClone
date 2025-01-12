@@ -29,9 +29,9 @@ export default function Header({ onHomeClick, onProfileClick }) {
         <div className="icon">
         <i class="fa-regular fa-square-plus"></i><div className="iconNmae">Create</div>
         </div>
-        <div className="icon">
+        {/* <div className="icon">
         <i class="fa-solid fa-bars"></i><div className="iconNmae">More</div>
-        </div>
+        </div> */}
       </div>
       <div className="headProfile" onClick={onProfileClick}>
         <div className="dp">
