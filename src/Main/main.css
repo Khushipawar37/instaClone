@@ -8,8 +8,8 @@
     display: flex;
 }
 .main{
-    margin-left: 19rem;
-    margin-right:10rem;
+    margin-left: 16rem;
+    margin-right:6rem;
     flex:1;
 }
 .story_prof {
@@ -135,7 +135,7 @@
 .postButton {
     position: relative;
     bottom: 1rem;
-    left:-5rem;
+    left:-12rem;
     padding: 0.5rem;
     background-color: #007bff;
     color: white;
