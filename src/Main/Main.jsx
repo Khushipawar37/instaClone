@@ -78,7 +78,6 @@ export default function Main() {
       comments: [],
     },
   ]);
-
   const handleLikeClick = (id) => {
     setPosts((prevPosts) =>
       prevPosts.map((post) =>
