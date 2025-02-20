@@ -1,7 +1,6 @@
 import "./sugg.css";
 import dp from "./dpp.jpg";
 
-
 export default function Suggested() {
   return (
     <div className="sugg_con">
