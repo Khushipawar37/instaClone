@@ -13,16 +13,13 @@ export const signup = async (email, password, fullName) => {
 
   return user;
 };
-
 export const login = async (email, password) => {
   const userCredential = await signInWithEmailAndPassword(auth, email, password);
   return userCredential.user;
 };
-
 export const logout = async () => {
   await signOut(auth);
 };
-
 export const fetchUserProfile = async (uid) => {
   const docRef = doc(db, "users", uid);
   const docSnap = await getDoc(docRef);
