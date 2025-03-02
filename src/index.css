@@ -17,7 +17,6 @@ body {
     display: none; 
   }
 }
-
 .fixed, .sticky {
   z-index: 50;
 }
