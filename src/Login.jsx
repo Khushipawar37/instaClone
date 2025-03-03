@@ -50,9 +50,7 @@ const Login = ({ onLoginSuccess, switchToSignup }) => {
               className="auth-input"
             />
           </div>
-
           {error && <p className="error-message">{error}</p>}
-
           <button
             type="submit"
             disabled={loading || !email || !password}
@@ -62,7 +60,6 @@ const Login = ({ onLoginSuccess, switchToSignup }) => {
           </button>
         </form>
       </div>
-
       <div className="auth-switch-card">
         <p>
           Don't have an account?{" "}
