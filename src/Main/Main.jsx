@@ -110,7 +110,6 @@ export default function Main() {
       alert("Please enter a comment.");
     }
   };
-
   return (
     <>
       <div className="main">
