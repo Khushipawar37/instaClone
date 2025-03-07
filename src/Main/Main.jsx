@@ -141,7 +141,6 @@ export default function Main() {
             {">"}
           </button>
         </div>
-
         {/* Posts Section */}
         {posts.map((post) => (
           <div key={post.id} className="postContainer">
