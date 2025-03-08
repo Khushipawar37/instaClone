@@ -93,7 +93,6 @@ export default function Main() {
   };
   const handleCommentSubmit = (id, comment) => {
     const profileName = "Khushi";
-
     if (comment.trim() !== "") {
       setPosts((prevPosts) =>
         prevPosts.map((post) =>
